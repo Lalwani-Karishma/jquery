@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+
+    <script>
+        $(document).ready(function(){
+
+          $("#btn1").click(function(){
+            // $("#test").append("<li>THAR</li>");
+            $("#test").prepend("<li>THAR</li>");
+          });
+         
+          $("#cl").click(function(){
+          
+            $("#test").empty();
+          });
+         
+          $("#add").click(function(){
+          
+          $("#info").before("DEVELOPER");
+          // $("#info").after("DEVELOPER");
+        });
+2
+
+        $("#btn2").click(function(){
+            $("#test2").append("<li>javascript</li>");
+          });
+
+          $("#btn3").click(function(){
+            $("#test3").prepend("<li>jquery</li>");
+          });  
+
+          $("#abc").click(function(){
+            $("#dev").before("DEVELOPERSSSSS");
+          });
+
+          $("#abc1").click(function(){
+            $("#hey").after("Hello"); 
+          });  
+
+          $("#button1").click(function(){
+            $("#div1").remove();
+          });
+
+          $("#button2").click(function(){
+          $("#div2").empty();
+          });
+
+          $("#button3").click(function(){
+          $("h1, h2, p").toggleClass("blue");
+          });
+          
+
+        });
+        </script>
+
+<style>
+  .blue {
+    color: blue;
+  }
+  </style>
+
+</head>
+<body>
+    
+    <button id="btn1">ADD CAR</button>
+
+    <ol id="test" style="height: 300px;width: 300px;background-color: red;">
+        <li>Maruti</li>
+        <li>BMW</li>
+    </ol>
+
+    <button id="cl">clean</button>
+
+    <h1 id="info">KARISHMA</h1>
+    <button id="add">add</button>
+
+<br><br>
+
+    <button id="btn2">Click</button>
+
+    <ol id="test2">
+        <li>html</li>
+        <li>css</li>
+    </ol>
+
+    <button id="btn3">Click here</button>
+
+    <ol id="test3">
+        <li>bootstarp</li>
+        <li>java</li>
+    </ol>
+
+    <h1 id="dev">H1</h1>
+    <button id="abc">data</button>
+
+    <h2 id="hey">H2</h2>
+    <button id="abc1">Heyyy</button>
+    
+    <br><br>
+
+    <div id="div1" style="height:100px;width:300px;border:1px solid black;background-color:yellow;">
+
+      This is some text in the div.
+      <p>This is a paragraph in the div.</p>
+      <p>This is another paragraph in the div.</p>
+      
+      </div>
+      <br>
+      
+      <button id="button1">Remove div element</button>
+
+      <br><br>
+
+      <div id="div2" style="height:100px;width:300px;border:1px solid black;background-color:yellow;">
+
+        This is some text in the div.
+        <p>This is a paragraph in the div.</p>
+        <p>This is another paragraph in the div.</p>
+        
+        </div>
+        <br>
+        
+        <button id="button2">Empty the div element</button>
+
+<br><br>
+
+        <h1>Heading 1</h1>
+        <h2>Heading 2</h2>
+
+        <p>This is a paragraph.</p>
+        <p>This is another paragraph.</p>
+
+        <button id="button3">Toggle class</button>
+        
+    
+
+</body>
+</html>

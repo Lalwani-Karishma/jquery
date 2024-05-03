@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<style>
+
+    .new{color: purple;background-color: yellow;font-size: 30px;}
+    .but{color: chocolate;background-color: aqua;font-family: 'Courier New', Courier, monospace;}
+    .class{color: green;background-color: antiquewhite;}
+
+</style>
+
+    <script>
+
+$(document).ready(function(){
+
+
+   $("#red").click(function(){
+            $("h1,h2").css("color","red");
+          });
+   $("#blue").click(function(){
+            $("h1,h2").css("color","blue");
+          });
+   $("#gre").click(function(){
+            // $("h1,h2").css("color","green");
+            $("h1,h2").css({ "color":"red" , "font-size":"50px" , "font-family":"cursive" });
+          });
+
+          $("#aa").click(function(){
+           
+            $("h1,h2").toggleClass("new");
+          });
+
+    $("#yel").click(function(){
+        $("h3").css("color","yellow");
+        $("h3").css({"color":"lightblue","font-size":"20px","font-family":"cursive"})
+    });
+    
+    $("#pink").click(function(){
+        $("h3").css("color","pink");
+    });
+
+    $("#bro").click(function(){
+        $("h3").css("color","brown");
+    });
+
+    $("#button1").click(function(){
+
+        $("h3").toggleClass("but");
+    });
+
+    $("#newclass").click(function(){
+        $("p").toggleClass("class");
+    });
+
+          });
+
+
+    </script>
+</head>
+<body>
+
+    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe rerum error sint, molestiae nostrum eos voluptatum fuga optio vel officiis consectetur esse hic doloremque ratione iure ipsa magni aliquam soluta!</h1> <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe rerum error sint, molestiae nostrum eos voluptatum fuga optio vel officiis consectetur esse hic doloremque ratione iure ipsa magni aliquam soluta!</h1> <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe rerum error sint, molestiae nostrum eos voluptatum fuga optio vel officiis consectetur esse hic doloremque ratione iure ipsa magni aliquam soluta!</h1>
+    
+
+    <button id="red">red</button>
+    <button id="gre">green</button>
+    <button id="blue">blue</button>
+    <button id="aa">new changes</button>
+
+    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non similique quidem voluptatibus eos voluptates placeat provident assumenda. Accusamus natus quisquam sapiente sed tempore sint delectus hic esse ipsam! Adipisci, nihil?</h3>
+    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, ratione iste. Hic quia dignissimos odit debitis impedit libero illo corporis non ducimus facilis id distinctio suscipit, atque inventore necessitatibus voluptate?</h3>
+    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum adipisci veniam enim vitae, quisquam mollitia itaque repudiandae totam facere voluptate quis reprehenderit voluptas, voluptatibus dolor quibusdam pariatur minima numquam sint?</h3>
+
+    <button id="yel">yellow</button>
+    <button id="pink">pink</button>
+    <button id="bro">brown</button>
+    <button id="button1">click</button>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis ducimus, assumenda sapiente quis dolores excepturi inventore quam quas, ipsam cumque nostrum amet! Quam omnis id laudantium dolorum, voluptatum voluptatem maxime.</p>
+
+    <button id="newclass">click here</button>
+
+</body>
+</html>

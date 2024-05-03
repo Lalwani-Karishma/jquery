@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+       
+          $("#btn2").click(function(){
+            // $("#test").html("<u>ASUS GAMING TUF</u>");
+            $("#test").text("<u>ASUS GAMING TUF</u>");
+        });
+        
+        $("#com").click(function(){
+            $("#test1").html("<i>MOUSE</i>");
+            // $("#test1").text("<i>MOUSE</i>");
+        });
+
+            $("#i1").click(function(){
+            
+            $("#i1").val("Mr/Mrs");
+        });
+
+        $("#i2").click(function(){
+            
+            $("#i2").val("91");
+       
+        });
+
+        $("#i3").click(function(){
+
+            $("#i3").val("xyz@gmail.com");
+
+        });
+
+        $("#i4").click(function(){
+
+            $("#i4").val("abc");
+
+        });
+
+        });
+        </script>
+        
+</head>
+<body>
+    
+<button id="btn2">LAPTOP</button>
+<h1 id="test"></h1>
+
+<input type="text" id="i1">
+<input type="num" id="i2">
+<br><br>
+
+<button id="com">COMPUTER</button>
+<h1 id="test1"></h1>
+
+<input type="email" id="i3">
+<input type="search" id="i4" >
+
+</body>
+</html>

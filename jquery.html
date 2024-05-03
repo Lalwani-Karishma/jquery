@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+
+
+          $("#hide").click(function(){
+            $("h1,h2,.my").hide();
+          });
+          $("#show").click(function(){
+            $("h1,h2,.my").show();
+          });
+
+        $("#txt").mouseenter(function(){
+            $("h1,h2,.my").fadeToggle(1000);
+          });
+
+        $("#text").click(function(){
+        $("h3").slideToggle("slow");
+        });
+
+        $("#button0").click(function(){
+        $("#div0").animate({ height: 'toggle'});
+        }); 
+
+        $("#button1").click(function(){
+        var div = $("#div1");
+        div.animate({height: '300px', opacity: '0.4'}, "slow");
+        div.animate({width: '300px', opacity: '0.8'}, "slow");
+        div.animate({height: '100px', opacity: '0.4'}, "slow");
+        div.animate({width: '100px', opacity: '0.8'}, "slow");
+        });
+        
+        $("#button2").click(function(){
+        var div = $("#div2");  
+        div.animate({left: '100px'}, "slow");
+        div.animate({fontSize: '3em'}, "slow");
+        });
+
+        $("#flip").click(function(){
+        $("#panel").slideDown(3000);
+        });
+
+        $("#stop").click(function(){
+        $("#panel").stop();
+        });
+
+        $("#start").click(function(){
+    $("span").animate({left: '100px'}, 5000);
+    $("span").animate({fontSize: '3em'}, 5000);
+  });
+  
+  $("#stop1").click(function(){
+    $("span").stop();
+  });
+
+  $("#stop2").click(function(){
+    $("span").stop(true);
+  });
+
+  $("#stop3").click(function(){
+    $("span").stop(true, true);
+  });
+  
+  $("#button3").click(function(){
+    $("p").hide("slow", function(){
+      alert("The paragraph is now hidden");
+    });
+  });
+
+  $("#buttonpara").click(function(){
+    $("#para").hide(5000);
+    alert("paragrappppppppphhhhhhhhhhhhh")
+  });
+
+  $("#button4").click(function(){
+    $("#p1").css("color", "red").slideUp(2000).slideDown(2000);
+  });
+
+  $("#button5").click(function(){
+    $("#div3").fadeToggle();
+    $("#div4").fadeToggle("slow");
+    $("#div5").fadeToggle(3000);
+  });
+
+
+        });
+        </script>
+
+<style> 
+    #panel, #flip {
+      padding: 5px;font-size: 18px;text-align: center;background-color: #555;color: white;border: solid 1px #666;border-radius: 3px;
+    }
+    
+    #panel {
+      padding: 50px;display: none;
+    }
+    </style>
+
+</head>
+<body>
+
+    <button id="txt">h/s</button>
+    <button id="button0">Animation</button>
+    <button id="button1">Start Animation</button>
+    <button id="button2">Hello</button>
+    <button id="stop">Stop sliding</button><br><br>
+
+    <button id="start">Start</button>
+<button id="stop1">Stop</button>
+<button id="stop2">Stop all</button>
+<button id="stop3">Stop but finish</button>
+<button id="button3">Hideee</button>
+<button id="buttonpara">Hide para</button>
+<button id="button4">Click me</button>
+<button id="button5">Click to fade box</button>
+
+<br><br>
+
+<p>This is a paragraph with little content.</p>
+<p id="para">paragrapppppppphhhhhhhhhhh.</p>
+
+<p id="p1">jQuery is fun!!</p>
+
+    <div style="background:#98bf21;height:100px;width:100px;position:absolute;" id="div0"></div>
+
+    <div style="background:green;height:100px;width:100px;position:absolute;margin-left: 200px;" id="div1"></div>
+
+    <div style="background:red;height:100px;width:200px;position:absolute;margin-left: 350px;" id="div2">HELLO</div>
+
+    <span style="background:pink;height:100px;width:200px;position:absolute;margin-left:650px;" >HELLOO</span>
+
+    <br><br><br><br><br><br><br><br>
+
+    <div id="flip">Click to slide down panel</div>
+    <div id="panel">Hello world!</div><br>
+
+    <div id="div3" style="width:80px;height:80px;background-color:red;"></div>
+    <br>
+    <div id="div4" style="width:80px;height:80px;background-color:green;"></div>
+    <br>
+    <div id="div5" style="width:80px;height:80px;background-color:blue;"></div>
+
+<h1>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae facilis tempora consequuntur dolore eum officia alias praesentium suscipit excepturi exercitationem rerum, quaerat distinctio neque voluptates voluptatum, omnis sapiente id velit?</h1>
+<h2 >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae facilis tempora consequuntur dolore eum officia alias praesentium suscipit excepturi exercitationem rerum, quaerat distinctio neque voluptates voluptatum, omnis sapiente id velit?</h2>
+<h1>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae facilis tempora consequuntur dolore eum officia alias praesentium suscipit excepturi exercitationem rerum, quaerat distinctio neque voluptates voluptatum, omnis sapiente id velit?</h1>
+<p class="my">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae facilis tempora consequuntur dolore eum officia alias praesentium suscipit excepturi exercitationem rerum, quaerat distinctio neque voluptates voluptatum, omnis sapiente id velit?</p>
+<h1>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae facilis tempora consequuntur dolore eum officia alias praesentium suscipit excepturi exercitationem rerum, quaerat distinctio neque voluptates voluptatum, omnis sapiente id velit?</h1>
+<h1>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae facilis tempora consequuntur dolore eum officia alias praesentium suscipit excepturi exercitationem rerum, quaerat distinctio neque voluptates voluptatum, omnis sapiente id velit?</h1>
+<h3>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae facilis tempora consequuntur dolore eum officia alias praesentium suscipit excepturi exercitationem rerum, quaerat distinctio neque voluptates voluptatum, omnis sapiente id velit?</h3>
+
+
+    <button id="hide">hide</button>
+    <button id="show">show</button>
+    <button id="text">Click</button>
+
+  
+</body>
+</html>
